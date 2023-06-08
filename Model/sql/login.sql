@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `postagens` (
   `conteudo` text,
   `data_publicacao` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -45,21 +45,16 @@ CREATE TABLE IF NOT EXISTS `postagens` (
 DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
   `usuario_id` int NOT NULL AUTO_INCREMENT,
-  `usuario` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `usuario` varchar(200) CHARACTER SET utf8mb4 NOT NULL,
   `senha` varchar(32) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `data_cadastro` datetime NOT NULL,
   PRIMARY KEY (`usuario_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
-
-INSERT INTO `usuario` (`usuario_id`, `usuario`, `senha`, `nome`, `data_cadastro`) VALUES
-(1, 'tay@tay', '202cb962ac59075b964b07152d234b70', 'tay', '2023-05-18 16:51:08');
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

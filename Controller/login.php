@@ -3,12 +3,14 @@ session_start();
 include('../Model/conexao.php');
 
 if(empty($_POST['usuario']) || empty($_POST['senha'])) {
-	header('Location: ../View/index.php');
+	header('Location: ../View/logar.php');
 	exit();
 }
 
 $usuario = mysqli_real_escape_string($conexao, $_POST['usuario']);
 $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
+
+
 
 $query = "select nome from usuario where usuario = '{$usuario}' and senha = md5('{$senha}')";
 
@@ -19,10 +21,10 @@ $row = mysqli_num_rows($result);
 if($row == 1) {
 	$usuario_bd = mysqli_fetch_assoc($result);
 	$_SESSION['nome'] = $usuario_bd['nome'];
-	header('Location: ../View/painel.php');
+	header('Location: /painel');
 	exit();
 } else {
 	$_SESSION['nao_autenticado'] = true;
-	header('Location: ../View/index.php');
+	header('Location: ../View/logar.php');
 	exit();
 }

@@ -1,5 +1,5 @@
 <?php
-include('../verifica_login.php');
+// include('../Model/verifica_login.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -36,7 +36,9 @@ include('../verifica_login.php');
 
       <p>
         Cápsula do tempo de <br />
-        <strong><?php echo $_SESSION['nome']; ?></strong>
+        <strong><?php echo $_SESSION['nome']; ?> </strong>
+
+
       </p><br><br>
 
       <i>Colecione momentos marcantes da sua jornada e relembre aqui!</i>
@@ -46,37 +48,24 @@ include('../verifica_login.php');
     </aside>
     <nav>
     <div class="postagem">
-      <h1>Postagem:</h1>
+      <!-- <h1>Postagem:</h1> -->
       <form method="post" action="../Controller/post.php">
         <label for="titulo">Título:</label><br>
-        <input type="text" id="titulo" name="titulo"><br><br>
+        <input class="input-box" type="text" id="titulo" name="titulo"><br><br>
         
         <label for="conteudo">Conteúdo:</label><br>
-        <input type="text" id="conteudo" name="conteudo"></input><br><br>
+        <input class="input-box" type="text" id="conteudo" name="conteudo"></input><br><br>
         
-        <input type="submit" value="Publicar">
+        <input class="continue-button" type="submit" value="+">
     </div>
+
     <br>
     </form>
-      <!-- <a href="#" target="_blank" class="memory">
-        <small>20 de Março de 2023</small>
-        <h1>Jornada do Zero à Primeira Vaga</h1>
-        <img
-          src="../assets/jornada.png"
-          alt="Rodrigo e Mayk apresentando o evento Jornada do Zero à Primeira Vaga"
-        />
-        <p>
-          At vero eos et accusamus et iusto odio dignissimos ducimus qui
-          blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-          et quas molestias excepturi sint occaecati cupiditate non provident,
-          similique...
-        </p>
-      </a> -->
       <h2>Postagens Recentes:</h2>
     
     <?php
       // Incluir o arquivo de conexão com o banco de dados
-      include('../Model/conexao.php');
+      include('./Model/conexao.php');
 
       // Selecionar todas as postagens da tabela "postagens" (supondo que a tabela já exista)
       $query = "SELECT * FROM postagens";
@@ -86,8 +75,9 @@ include('../verifica_login.php');
       while ($row = mysqli_fetch_assoc($result)) {
         echo "<br><br>";
         echo "<h1>"."Titúlo: ". $row['titulo'] . "</h3>";
-        echo "<p>"."Hitória compartilhada: " . $row['conteudo'] . "</p>";
         echo "<small>".$row['data_publicacao']."</small>";
+        echo "<br><br>"; 
+        echo "<p>"."Hitória compartilhada: " . $row['conteudo'] . "</p>";
         echo "<br><hr>";
       }
 
