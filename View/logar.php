@@ -14,6 +14,8 @@ session_start();
     <link rel= "icon" href=
     https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png
     />
+    <script src="assets/js/jQuery/jquery-3.5.1.min.js"></script>
+
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -24,10 +26,10 @@ session_start();
 
 
     <main id="container">
-        <form id="login_form" action="../Controller/login.php" method="POST">
+        <form id="login_form" action="./Controller/login.php" method="POST">
             <!-- FORM HEADER -->
             <div id="form_header">
-               <a href="https://link-net.netlify.app/"><ion-icon name="arrow-back-circle-outline"></ion-icon></a></span> 
+               <a href="/"><ion-icon name="arrow-back-circle-outline"></ion-icon></a></span> 
                <h1>Acesse <br> a plataforma</h1>
                 
             </div>
@@ -93,10 +95,10 @@ session_start();
             </button>
 
             <div id="forgot_password">
-                        <a href="cadastro.php">
+                        <a href="./cadastro.php">
                           Criar conta
                         </a>
-                    </div>
+            </div>
         </form>
     </main>
 </body>

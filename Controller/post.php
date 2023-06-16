@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // Verificar se os campos foram preenchidos
 if (empty($_POST['titulo']) || empty($_POST['conteudo'])) {
     echo "Por favor, preencha todos os campos.";
@@ -12,8 +14,22 @@ $conteudo = $_POST['conteudo'];
 // Incluir o arquivo de conexão com o banco de dados
 include('../Model/conexao.php');
 
+date_default_timezone_set('America/Sao_Paulo');
+$hora_local = date('Y-m-d h:i:s', time());
+
+
+// $usuario = $_SESSION['nome'];
+
+
+// $tabela = "select usuario_id from usuario where nome = '{$usuario}')";
+
+// $pesquisa = mysqli_query($conexao, $tabela);
+
+// $id_usuario = mysqli_num_rows($pesquisa);
+
+
 // Inserir a nova postagem na tabela "postagens" (supondo que a tabela já exista)
-$query = "INSERT INTO postagens (titulo, conteudo) VALUES ('$titulo', '$conteudo')";
+$query = "INSERT INTO postagens (titulo, conteudo, data_publicacao, usuario_usuario_id) VALUES ('$titulo', '$conteudo', '$hora_local','1')";
 $result = mysqli_query($conexao, $query);
 
 if ($result) {

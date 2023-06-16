@@ -1,0 +1,640 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spacetime</title>
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel= "icon" href=
+    https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png
+    />
+  <!-- Scripts (jQuery não pode ser o slim que vem do Boostrap) -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>
+  <!-- Progress Bar -->
+  <script src="progressbar.min.js"></script>
+  <!-- Parallax -->
+  <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+</head>
+
+<body>
+
+</body>
+<header>
+  <div class="container" id="nav-container">
+    <!-- add essa class -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+      <a class="navbar-brand" href="index.html">
+        <img id="logo"
+          src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png"
+          alt="Spacetime">Spacetime</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
+        aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+        <a class="nav-link active" href="../View/cadastro.php">Cadastrar</a>
+        <a class="nav-link active" href="../View/logar.php">Login</a>
+        
+
+
+
+      </div>
+      <div class="social">
+        <a  href="https://www.instagram.com/taylorvteixeira/"><ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a  href="https://twitter.com/rewmond_"><ion-icon name="logo-twitter"></ion-icon></a>
+        </div>
+    </nav>
+
+  </div>
+</header>
+<main>
+  <div class="container-fluid">
+    <!-- slider -->
+    <div id="mainSlider" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../assets/background.svg" class="d-block w-100" alt="Projetos de e-commerce">
+          < <!-- tirar classe d-none -->
+
+            <div class="carousel-caption d-md-block">
+              <h2>Welcome</h5> 
+             
+                <p>Veja mais a baixo</p>
+                <a href="https://taylorvargas.netlify.app/#home" class="main-btn">Ver portfólio</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sobre a empresa -->
+    <div id="about-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="main-title">Sobre Spacetime</h3>
+          </div>
+          <div class="col-md-6">
+            <img class="img-fluid"
+              src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png"
+              alt="">
+          </div>
+          <div class="col-md-6">
+            <h3 class="about-title">About</h3>
+            <br>
+            <p>Veja outros diferenciais:</p>
+            <br>
+            <ul id="about-list">
+              <li><i class="fas fa-check"></i> Layout responsivo para todos os dispositivos</li>
+              <li><i class="fas fa-check"></i> Integração com diversos sistemas do mercado</li>
+              <li><i class="fas fa-check"></i> Desenvolvimento com metodologia ágil</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Serviços da empresa -->
+    <div id="services-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="main-title">Nossas especialidades</h3>
+          </div>
+          <div class="col-md-4 service-box">
+            <i class="fas fa-mobile-alt"></i>
+            <h4>Aplicativos Nativos</h4>
+            <p>Utilizamos o real poder dos dispositivos móveis construindo aplicativos nativos.</p>
+          </div>
+
+          <div class="col-md-4 service-box">
+            <i class="fas fa-paint-brush"></i>
+            <h4>Design Criativo</h4>
+            <p> Especializado em UI/UX e também possuem vasta experiência no mercado de software.
+            </p>
+          </div>
+
+          <div class="col-md-4 service-box">
+            <i class="fas fa-server"></i>
+            <h4>Experiência em servidores</h4>
+            <p>Garantimos uptime e também rápido tempo de resposta do seu site para o seu cliente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div id="news-area">
+      <div class="container">
+        <div class="col-md-12">
+          <h3 class="main-title">Fique por dentro das novidades</h3>
+        </div>
+      </div>
+    </div>
+    <!-- Call to Action -->
+
+  </div>
+</main>
+<!-- Rodapé -->
+<footer>
+  <div id="contact-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 contact-box">
+          <i class="fas fa-phone"></i>
+          <p><span class="contact-tile">Número: </span>(48) 998031058</p>
+        </div>
+        <div class="col-md-4 contact-box">
+          <i class="fas fa-envelope"></i>
+          <p><span class="contact-tile">Envie um email:</span> taylorvaragsteixeira@gmail.com.br</p>
+        </div>
+        <div class="col-md-4 contact-box">
+          <i class="fas fa-hands-helping"></i>
+          <p><span class="contact-tile">Suporte:</span> 24/7</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="copy-area">
+    <div class="container">
+      <div class="row">
+        <?php
+        date_default_timezone_set('America/Sao_Paulo');
+        $ano = date('Y', time());
+        ?>
+        <div class="col-md-12">
+          <p>© Desenvolvido por Taylor Vargas - 
+            <?php echo $ano ?> 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Scripts do projeto -->
+<script src="scripts.js"></script>
+</body>
+
+</html>
+
+<style>
+  /* Gerais */
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .container {
+    padding: 70px 0;
+  }
+
+  p,
+  li {
+    color: #444;
+    font-size: 14px;
+  }
+
+  /* Barra de navegação */
+  header,
+  .navbar {
+    background-color: #7952b3;
+    border-radius: 0 0 30px 30px;
+
+  }
+
+  #nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+
+  }
+
+  #logo {
+    width: 75px;
+  }
+
+  .navbar-brand {
+    padding: 0;
+    color: #FFF;
+  }
+
+  .navbar-brand:hover {
+    color: #FFF;
+  }
+
+  #navbar-links a {
+    color: #FFF;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem .8rem;
+  }
+
+  .nav-item.active {
+    border-bottom: 3px solid #FFF;
+  }
+
+  .social ion-icon {
+    padding: 5px;
+    color: white;
+    margin: 5px;
+  }
+
+  /* Slider */
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  #mainSlider .carousel-inner,
+  #mainSlider .carousel-item {
+    height: 90vh;
+  }
+
+  #mainSlider .carousel-caption {
+    top: 30%;
+  }
+
+  #mainSlider .carousel-caption h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+
+  #mainSlider .carousel-caption p {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 100px;
+    color: #FFF;
+  }
+
+  .main-btn {
+    background-color: #7b548d;
+    color: #FFF;
+    text-transform: uppercase;
+    width: 200px;
+    height: 60px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 3px solid transparent;
+    transition: .5s;
+  }
+
+  .main-btn:hover {
+    text-decoration: none;
+    color: #FFF;
+    background-color: transparent;
+    border-color: #7b548d;
+  }
+
+  .carousel-indicators .active {
+    background-color: #7b548d;
+  }
+
+  /* Sobre a empresa */
+
+  #about-area {
+    background-color: #F9F9F9;
+  }
+
+  .main-title {
+    color: #444;
+    margin: 0 0 65px 0;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .main-title::after {
+    content: "";
+    border-top: 2px solid #333;
+    width: 15%;
+    position: absolute;
+    top: 60px;
+    left: 42.5%;
+  }
+
+  .about-title {
+    font-size: 17px;
+    color: #444;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  #about-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  #about-list li {
+    line-height: 30px;
+  }
+
+  #about-list i {
+    color: #7b548d;
+    margin-right: 15px;
+  }
+
+  /* Serviços */
+
+  .service-box {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .service-box i,
+  .service-box h4 {
+    transition: .5s;
+  }
+
+  .service-box i {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #444;
+  }
+
+  .service-box h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .service-box:hover>i,
+  .service-box:hover>h4 {
+    color: #7b548d;
+  }
+
+ 
+
+  /* Footer */
+
+  #contact-area {
+    text-align: center;
+  }
+
+  .contact-box {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #7b548d;
+  }
+
+  .contact-box i {
+    color: #444;
+    border: solid 1px #444;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .contact-box p {
+    font-size: 16px;
+  }
+
+  .contact-tile {
+    font-weight: bold;
+    color: #7b548d;
+  }
+
+  #msg-box p {
+    font-size: 22px;
+  }
+
+  #contact-form input[type="text"],
+  #contact-form textarea {
+    margin-bottom: 15px;
+    border-radius: 0;
+  }
+
+  #contact-form .main-btn {
+    width: 120px;
+    height: 50px;
+  }
+
+  #contact-form .main-btn:hover {
+    color: #7b548d;
+  }
+
+  /* Copy */
+
+  #copy-area {
+    background-color: #F1F1F1;
+  }
+
+  #copy-area .container {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  #copy-area .container p {
+    margin-bottom: 0;
+  }
+
+  #copy-area .container a {
+    font-weight: bold;
+    color: #444;
+  }
+
+  #copy-area .container a:hover {
+    text-decoration: none;
+    color: #7b548d;
+  }
+
+  /* responsive */
+  @media(max-width: 768px) {
+
+    /* geral */
+    .container {
+      padding: 20px 0;
+    }
+
+    /* slider */
+    #mainSlider .carousel-inner,
+    #mainSlider .carousel-item {
+      height: auto;
+    }
+
+    #mainSlider .carousel-caption h2 {
+      font-size: 28px;
+    }
+
+    #mainSlider .carousel-caption p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .carousel-caption {
+      left: 10%;
+      right: 10%;
+    }
+
+    /* about */
+    #about-area img {
+      margin-top: 100px;
+    }
+
+    /* data */
+    .circle-box div {
+      padding: 0 10px;
+    }
+
+    #data-area p {
+      font-size: 16px;
+    }
+
+    /* team */
+    .card-title {
+      font-size: 14px;
+    }
+
+    .card-text {
+      font-size: 12px;
+    }
+
+    /* apply */
+    #apply-area .apply-box {
+      padding: 50px 25px;
+    }
+
+    /* news */
+    #news-area p {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #email-input {
+      width: 70%;
+    }
+
+    #call-area {
+      margin-top: 30px;
+    }
+
+    #call-area .container {
+      padding: 30px;
+    }
+
+    #call-area p,
+    #call-area #call-btn {
+      font-size: 16px;
+    }
+
+  }
+
+
+  @media(max-width: 425px) {
+
+    /* slider */
+    #mainSlider {
+      margin-top: 90px;
+    }
+
+    #mainSlider .carousel-caption {
+      top: 5%;
+    }
+
+    #mainSlider .carousel-caption h2 {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    #mainSlider .carousel-caption p {
+      display: none;
+    }
+
+    .carousel-caption .main-btn {
+
+      font-size: 14px;
+    }
+
+    /* about */
+    .main-title {
+      font-size: 30px;
+    }
+
+    #about-area img {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    /* data */
+    .circle-box {
+      width: 50%;
+    }
+
+    #team-area .col-md-3 {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+
+    /* apply */
+    #apply-area {
+      height: auto;
+    }
+
+    #company-img {
+      display: none;
+    }
+
+    /* filter */
+    #portfolio-area .filter-btn {
+      margin-bottom: 20px;
+    }
+
+    .project-box {
+      width: 50%;
+    }
+
+    /* news */
+    #news-area .main-title {
+      font-size: 24px;
+    }
+
+    #news-area p {
+      font-size: 16px;
+    }
+
+    #email-input {
+      width: 80%;
+    }
+
+    #call-area p,
+    #call-area #call-btn {
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+
+    #call-area p,
+    #call-area #call-btn {
+      margin: 0;
+      width: 50%;
+    }
+
+    /* contact */
+    .contact-box {
+      border: none;
+      margin-bottom: 0;
+    }
+  }
+</style>

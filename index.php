@@ -1,4 +1,84 @@
-* {
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taylor Vargas</title>
+
+    <link rel="icon"
+        href=https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png />
+
+    <!-- <link rel="stylesheet" href="./style.css" />
+
+    <script src="script.js" defer></script> -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="profile">
+            <img src="./assets/Avatar.png" alt="Foto de perfil de Taylor Vargas" />
+            <p>
+                Taylor Vargas Teixeira
+            </p>
+        </div>
+
+        <div id="switch" onclick="toggleMode()">
+            <button></button>
+            <span></span>
+        </div>
+
+        <ul>
+            <li>
+                <a href="https://taylorvargas.netlify.app/#home">Portifólio</a>
+            </li>
+            <li>
+                <a class="Yellow" href="./home/bootstrap.php" target="_blank">/Site</a>
+            </li>
+            <li>
+                <a class="" href="https://taylorteixeira.notion.site/Note-2d5cb832762a4e32b780d23d7b04dfe2"
+                    target="_blank">Note</a>
+            </li>
+            <li>
+                <a class="red" href="https://1drv.ms/f/s!AgAcv0GqcJBKqwsRvnyugGkPzffQ" target="_blank">//ARQSERVER</a>
+            </li>
+        </ul>
+        <div id="social-links">
+            <a href="https://github.com/rewmond">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+            <a href="https://www.figma.com/files/user/1194988629708425995?fuid=1194988629708425995">
+                <ion-icon name="logo-figma"></ion-icon>
+            </a>
+            <a href="https://www.instagram.com/taylorvteixeira/"><ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="https://twitter.com/rewmond_"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="https://www.linkedin.com/in/taylor-vargas-teixeira-2a9a89247/"><ion-icon
+                    name="logo-linkedin"></ion-icon></a>
+        </div>
+        <footer>Feito por Taylor Vargas</footer>
+    </div>
+</body>
+</html>
+
+<script>
+    function toggleMode() {
+   const html = document.documentElement
+
+ html.classList.toggle('light')
+}
+</script>
+
+<style>
+    * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,18 +88,18 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(../assets/bg-mobile.jpg);
+  --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --heighlight-color: rgba(0, 0, 0, 0.2);
-  --switch-bg-url: url(../assets/moonStars.svg);
+  --switch-bg-url: url(./assets/moonStars.svg);
 }
 
 .light {
   --text-color: black;
-  --bg-url: url(../assets/light-mode.jpg);
+  --bg-url: url(./assets/light-mode.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --heighlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bg-url: url(../assets/Sun.svg);
+  --switch-bg-url: url(./assets/Sun.svg);
 }
 
 body {
@@ -42,19 +122,13 @@ body * {
   display: flex;
   text-align: center;
   padding: 24px 0;
-
+  
 }
 
 #profile a {
   font-size: 24px;
   padding: 0 16px;
 }
-
-.leave{
-  font-size: 30px;
-    padding: 0 16px;
-  }
-
 
 #profile img {
   width: 90px;
@@ -139,9 +213,8 @@ ul li a {
 
   transition: background 0.2s;
 }
-
-.Yellow {
-  display: flex;
+.Yellow{
+    display: flex;
   align-content: center;
   justify-content: center;
 
@@ -157,7 +230,6 @@ ul li a {
   transition: background 0.2s;
 
 }
-
 .red {
   display: flex;
   align-content: center;
@@ -203,6 +275,7 @@ ul li a:hover {
 
 #social-links a:hover {
   background: var(--heighlight-color);
+  padding: 16px;
 }
 
 footer {
@@ -210,15 +283,11 @@ footer {
   text-align: center;
   font-size: 14px;
 }
-.leave {
-  font-size: 30px;
-  padding: 0 16px;
-}
+
 @keyframes slide-in {
   from {
     left: 0;
   }
-
   to {
     left: 50%;
   }
@@ -228,9 +297,8 @@ footer {
   from {
     left: 50%;
   }
-
   to {
     left: 0;
   }
 }
-
+</style>

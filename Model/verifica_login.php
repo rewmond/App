@@ -1,6 +1,6 @@
 <?php
 session_start();
 if(!$_SESSION['nome']) {
-	header('Location: ./View/index.php');
+	header('Location: ../View/logar.php');
 	exit();
 }

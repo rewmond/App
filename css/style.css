@@ -6,7 +6,7 @@
   --color-light-50: #f8fafc;
 
   /* background */
-  --bg-url: url(../assets/bg.jpg);
+  --bg-url: url(../assets/background.svg);
 
   /* Purple */
   --color-purple-50: #7c3aed;
@@ -55,7 +55,7 @@
   justify-content: space-between;
 }
 
-#form_header a i {
+#form_header a ion-icon {
   height: 32px;
   width: 32px;
 }
@@ -63,6 +63,7 @@
 #form_header h1 {
   font-size: 40px;
   position: relative;
+  margin: 10px;
 }
 
 #form_header h1::before {

@@ -44,14 +44,14 @@ session_start();
                         <h1>Cadastre-se</h1>
                     </div>
                     <div class="login-button">
-                        <button><a href="./index">Entrar</a></button>
+                        <button><a href="./logar.php">Entrar</a></button>
                     </div>
                 </div>
 
                 <div class="input-group">
                     <div class="input-box">
-                        <label for="firstname">Primeiro Nome</label>
-                        <input id="firstname" type="text" name="nome" placeholder="Digite seu primeiro nome" required>
+                        <label for="firstname">Nome</label>
+                        <input id="firstname" type="text" name="nome" placeholder="Digite seu nome" required>
                     </div>
 
                     <div class="input-box">
