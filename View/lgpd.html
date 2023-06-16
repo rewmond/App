@@ -32,14 +32,43 @@
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 </head>
 <body>
+    <header>
+        <div class="container" id="nav-container">
+            <!-- add essa class -->
+            <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+                <a class="navbar-brand" href="../home/bootstrap.html">
+                    <img id="logo"
+                        src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png"
+                        alt="Spacetime">Spacetime</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
+                    aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+
+                    <a class="nav-link active" href="../View/logar.html">Login</a>
+    
+    
+                </div>
+                <div class="social">
+    
+                    <a href="https://www.instagram.com/taylorvteixeira/"><ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="https://twitter.com/rewmond_"><ion-icon name="logo-twitter"></ion-icon></a>
+                </div>
+            </nav>
+    
+        </div>
+    </header>
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        Alerta, sistema em teste!
+       !
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span style="color: black;" aria-hidden="true">&times;</span>
         </button>
     </div>
 
 <div class="container">
+
         <!-- Botão -->
         <div class="row" style="width:100%">
             <div class="col-md-10" id="filter-btn-box">
@@ -151,6 +180,51 @@
     </div>
 
     <style>
+        /* navbar */
+        /* Barra de navegação */
+  header,
+  .navbar {
+    background-color: #7952b3;
+    border-radius: 0 0 30px 30px;
+
+  }
+
+  #nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+
+  }
+
+  #logo {
+    width: 75px;
+  }
+
+  .navbar-brand {
+    padding: 0;
+    color: #FFF;
+  }
+
+  .navbar-brand:hover {
+    color: #FFF;
+  }
+
+  #navbar-links a {
+    color: #FFF;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem .8rem;
+  }
+
+  .nav-item.active {
+    border-bottom: 3px solid #FFF;
+  }
+
+  .social ion-icon {
+    padding: 5px;
+    color: white;
+    margin: 5px;
+  }
         /* ocultar */
         #ocultar {
          display: none;
