@@ -95,11 +95,9 @@ session_start();
             </button>
 
             <div id="forgot_password">
-<<<<<<< HEAD
+
                         <a href="./cadastro.php">
-=======
-                        <a href="./logar/cadastro">
->>>>>>> 813433392e054f8fb110df5d97eab84ce3daf1ad
+
                           Criar conta
                         </a>
             </div>

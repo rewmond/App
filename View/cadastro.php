@@ -44,11 +44,8 @@ session_start();
                         <h1>Cadastre-se</h1>
                     </div>
                     <div class="login-button">
-<<<<<<< HEAD
                         <button><a href="./logar.php">Entrar</a></button>
-=======
-                        <button><a href="/logar">Entrar</a></button>
->>>>>>> 813433392e054f8fb110df5d97eab84ce3daf1ad
+
                     </div>
                 </div>
 
