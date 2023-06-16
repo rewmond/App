@@ -29,7 +29,11 @@ class PessoaController
     {
         // Para saber mais sobre include , leia: https://www.php.net/manual/pt_BR/function.include.php
 
+<<<<<<< HEAD
         include './home/bootstrap.php'; // Include da View, propriedade $rows da Model pode ser acessada na View
+=======
+        include './site/bootstrap.php'; // Include da View, propriedade $rows da Model pode ser acessada na View
+>>>>>>> 813433392e054f8fb110df5d97eab84ce3daf1ad
     }
 
     /**

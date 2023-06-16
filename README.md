@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- # <?php
 # define('HOST', 'localhost');
 # define('USUARIO', 'root');
@@ -42,3 +43,6 @@
  - Baixar na maquina local
  - instalar composer init 
  - Fazer components
+=======
+
+>>>>>>> 813433392e054f8fb110df5d97eab84ce3daf1ad
