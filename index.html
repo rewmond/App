@@ -3,29 +3,39 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LGPD</title>
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="icon"
+    href=https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png />
+  <!-- Scripts (jQuery não pode ser o slim que vem do Boostrap) -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taylor Vargas</title>
-
-    <link rel="icon"
-        href=https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png />
-
-    <!-- <link rel="stylesheet" href="./style.css" />
-
-    <script src="script.js" defer></script> -->
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
   
     <div id="container">
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+         Alerta! <a style="color: rgb(104, 85, 85);" href="/view/lgpd.html">Proteção de dados</a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span style="color: black;" aria-hidden="true">&times;</span>
+        </button>
+      </div>
         <div id="profile">
             <img src="./assets/Avatar.png" alt="Foto de perfil de Taylor Vargas" />
             <p>
@@ -53,20 +63,20 @@
                 <a class="red" href="https://1drv.ms/f/s!AgAcv0GqcJBKqwsRvnyugGkPzffQ" target="_blank">//ARQSERVER</a>
             </li>
         </ul>
-        <div id="social-links">
-            <a href="https://github.com/rewmond">
-                <ion-icon name="logo-github"></ion-icon>
-            </a>
-            <a href="https://www.figma.com/files/user/1194988629708425995?fuid=1194988629708425995">
-                <ion-icon name="logo-figma"></ion-icon>
-            </a>
-            <a href="https://www.instagram.com/taylorvteixeira/"><ion-icon name="logo-instagram"></ion-icon>
-            </a>
-            <a href="https://twitter.com/rewmond_"><ion-icon name="logo-twitter"></ion-icon></a>
-            <a href="https://www.linkedin.com/in/taylor-vargas-teixeira-2a9a89247/"><ion-icon
-                    name="logo-linkedin"></ion-icon></a>
-        </div>
-        <footer>Feito por Taylor Vargas</footer>
+        
+        <footer><div class="container">
+          <div class="row">
+            <?php
+                date_default_timezone_set('America/Sao_Paulo');
+                $ano = date('Y', time());
+                ?>
+            <div class="col-md-12">
+              <p>© Desenvolvido por Taylor Vargas -
+                <?php echo $ano ?>
+              </p>
+            </div>
+          </div>
+        </div></footer>
     </div>
 </body>
 </html>
@@ -116,7 +126,7 @@ body * {
 #container {
   width: 360px;
 
-  margin: 56px auto 0px auto;
+  margin: 36px auto 0px auto;
   padding: 0 24px;
 }
 
@@ -254,34 +264,8 @@ ul li a:hover {
   border: 1.5px solid var(--text-color);
 }
 
-#social-links {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-
-  padding: 24px 0;
-
-  font-size: 24px;
-}
-
-#social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: background 0.2s;
-  border-radius: 50%;
-}
-
-/* passar o padding para cima e tirar o gap */
-
-#social-links a:hover {
-  background: var(--heighlight-color);
-  padding: 16px;
-}
-
 footer {
-  padding: 24px 0;
+  padding: 5px 0;
   text-align: center;
   font-size: 14px;
 }
