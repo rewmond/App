@@ -37,7 +37,7 @@
   "[css]": {
     "editor.defaultFormatter": "vscode.css-language-features"
   },
-  "liveServer.settings.port": 5502,
+  "liveServer.settings.port": 5503,
   "[php]": {
     "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
   }

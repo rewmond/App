@@ -21,5 +21,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(../assets/bg.jpg) no-repeat top center/cover;
+  background: url() no-repeat top center/cover;
+  
 }
